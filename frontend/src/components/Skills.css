@@ -1,0 +1,108 @@
+.skills-section { background: var(--bg-primary); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.skills-card {
+  padding: 28px;
+}
+
+.skills-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.cat-icon { font-size: 1.4rem; }
+
+.cat-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cat-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-list { display: flex; flex-direction: column; gap: 16px; }
+
+.skill-item {}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.skill-icon { font-size: 0.9rem; }
+
+.skill-name {
+  flex: 1;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.skill-pct {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--cat-color);
+}
+
+.skill-track {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cat-color), color-mix(in srgb, var(--cat-color) 50%, #fff));
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.skill-fill::after {
+  content: '';
+  position: absolute;
+  right: 0; top: -2px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--cat-color);
+  box-shadow: 0 0 8px var(--cat-color);
+  opacity: 0.8;
+}
+
+/* Tech cloud */
+.tech-cloud {
+  text-align: center;
+  padding: 40px;
+  background: rgba(13, 31, 60, 0.4);
+  border: 1px solid rgba(0,212,255,0.08);
+  border-radius: 16px;
+}
+
+.cloud-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.cloud-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}

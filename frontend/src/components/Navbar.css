@@ -1,0 +1,130 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(5, 10, 20, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  padding: 12px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: default;
+}
+
+.logo-bracket { color: #00d4ff; }
+.logo-name {
+  color: #e2e8f0;
+  margin: 0 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-links li a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.nav-cta {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #00d4ff, #7c3aed);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #00d4ff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-cta { display: none; }
+
+  .nav-links {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(5, 10, 20, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    border-left: 1px solid rgba(0, 212, 255, 0.1);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    padding: 14px 40px;
+  }
+}

@@ -1,0 +1,206 @@
+.about-section { background: var(--bg-secondary); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left */
+.about-img-container {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.about-img-frame {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  position: relative;
+  background: var(--bg-card);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.about-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.about-img-placeholder {
+  font-family: 'Syne', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(0, 212, 255, 0.3);
+  position: absolute;
+}
+
+.about-img-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 212, 255, 0.1));
+  pointer-events: none;
+}
+
+.about-corner-tag {
+  position: absolute;
+  bottom: -12px; right: 20px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  font-family: 'Space Mono', monospace;
+}
+
+.contact-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(13, 31, 60, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.pill:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  color: var(--accent-cyan);
+  transform: translateX(4px);
+}
+
+/* Right */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 12px 12px 0 0;
+}
+
+.dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.dot.red { background: #ff5f57; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #28c840; }
+
+.terminal-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: #475569;
+  margin-left: 8px;
+}
+
+.about-bio-box {
+  background: rgba(13, 31, 60, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.terminal-body { padding: 20px; }
+
+.about-bio-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(13, 31, 60, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.highlight-icon { font-size: 1.5rem; }
+
+.highlight-card strong {
+  display: block;
+  font-size: 0.85rem;
+  font-family: 'Syne', sans-serif;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.highlight-card p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.cert-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: rgba(13, 31, 60, 0.6);
+  border: 1px solid;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover { transform: translateX(4px); }
+.cert-icon { font-size: 1.8rem; }
+
+.cert-info strong {
+  display: block;
+  font-size: 0.9rem;
+  font-family: 'Syne', sans-serif;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.cert-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-img-frame { max-width: 300px; margin: 0 auto; }
+  .about-highlights { grid-template-columns: 1fr; }
+}
