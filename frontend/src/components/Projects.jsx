@@ -17,9 +17,6 @@ const ProjectModal = ({ project, onClose }) => {
               className="modal-img"
               onError={e => { e.target.style.display = 'none'; e.target.parentNode.classList.add('no-img'); }}
             />
-            <div className="modal-img-placeholder">
-              <span style={{ color: project.color }}>📁</span>
-            </div>
           </div>
           <div className="modal-hero-info">
             <span className="modal-company" style={{ color: project.color }}>{project.company}</span>
