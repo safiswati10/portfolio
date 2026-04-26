@@ -10,7 +10,6 @@ const Footer = () => (
         <span className="logo-bracket">/&gt;</span>
       </div>
       <p className="footer-copy">© {new Date().getFullYear()} Safi ur Rehman. Built with React.js & Node.js</p>
-      <p className="footer-tagline">Designed & Developed with ❤️ in Abbottabad, PK</p>
     </div>
   </footer>
 );

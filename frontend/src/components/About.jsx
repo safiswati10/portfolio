@@ -22,7 +22,7 @@ const About = () => {
                     e.target.parentNode.parentNode.classList.add('no-img-frame');
                   }}
                 />
-                <div className="about-img-placeholder">SR</div>
+                <div className="about-img-placeholder"></div>
               </div>
               <div className="about-img-glow" />
               <div className="about-corner-tag">

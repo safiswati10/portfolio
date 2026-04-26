@@ -93,7 +93,7 @@ export const projects = [
     company: "Elixir Technologies",
     period: "Nov 2023 – Jul 2024",
     shortDesc: "A powerful data-driven table UI with drag-and-drop, real-time updates, and customizable formatting built with React.js.",
-    thumbnail: "/images/project1.jpg",
+    thumbnail: "/images/project1.png",
     tech: ["React.js", "Ag-Grid", "XLSX", "JavaScript", "CSS3"],
     color: "#00d4ff",
     details: {
@@ -108,7 +108,7 @@ export const projects = [
       ],
       challenges: "The biggest challenge was implementing smooth drag-and-drop with real-time updates while maintaining high performance with large datasets.",
       outcome: "Successfully delivered the project, simplifying complex data handling and improving decision-making through intuitive interfaces.",
-      images: ["/images/project1.jpg", "/images/project1-2.jpg"]
+      images: ["/images/project1.png", "/images/project1.png"]
     }
   },
   {
@@ -117,7 +117,7 @@ export const projects = [
     company: "Personal Project",
     period: "Dec 2024 – Jan 2025",
     shortDesc: "Complete restaurant management system with role-based dashboards for users, restaurants, and admins with real-time order tracking.",
-    thumbnail: "/images/project2.jpg",
+    thumbnail: "/images/project2.png",
     tech: ["React.js", "Bootstrap", "RESTful APIs", "JavaScript", "LocalStorage"],
     color: "#7c3aed",
     details: {
@@ -133,7 +133,7 @@ export const projects = [
       ],
       challenges: "Implementing role-based routing and managing complex state across multiple user types while keeping the UI clean and intuitive.",
       outcome: "Successfully built a production-ready restaurant platform with all core features working seamlessly.",
-      images: ["/images/project2.jpg", "/images/project2-2.jpg"]
+      images: ["/images/project2.png", "/images/project2.png"]
     }
   }
 ];

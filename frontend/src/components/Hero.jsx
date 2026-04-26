@@ -160,7 +160,7 @@ const Hero = () => {
                   }}
                 />
                 <div className="profile-placeholder">
-                  <span>S</span>
+                  
                 </div>
               </div>
             </div>

@@ -97,7 +97,7 @@ const Projects = () => {
                   onError={e => { e.target.style.display = 'none'; e.target.parentNode.classList.add('no-img'); }}
                 />
                 <div className="proj-img-placeholder">
-                  <span>📁</span>
+                  
                 </div>
                 <div className="proj-overlay">
                   <span className="proj-view-btn">View Details →</span>
